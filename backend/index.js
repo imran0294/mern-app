@@ -8,6 +8,20 @@ require('dotenv').config();
 require('./Models/db');
 const port = process.env.PORT || 8089;
 
+
+
+// Allow CORS for your frontend
+app.use(
+    cors({
+        origin: "https://mern-app-tkdx-uis.vercel.app", // Allow frontend URL
+        methods: "GET,POST,PUT,DELETE",
+        credentials: true, // Allow cookies if needed
+    })
+);
+
+// OR allow all origins (for testing only)
+app.use(cors());
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
