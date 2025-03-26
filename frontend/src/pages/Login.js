@@ -22,7 +22,7 @@ function Login() {
     e.preventDefault();
     const { email, password } = logininfo;
     if (email && password) {
-      const url = "http://localhost:8089/auth/login";
+      const url = "https://mern-app-16vz.vercel.app/auth/login";
       const response = await fetch(url, {
         method: 'POST',
         headers: {

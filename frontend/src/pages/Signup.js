@@ -26,7 +26,7 @@ function Signup() {
         const { name, email, phone, password } = signupinfo;
         if (name && email && phone && password) {
             try {
-                const url = "http://localhost:8089/auth/signup";
+                const url = "https://mern-app-16vz.vercel.app/auth/signup";
                 const response = await fetch(url, {
                     method: 'POST',
                     headers: {
